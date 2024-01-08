@@ -54,19 +54,19 @@ class Binary_tree:
 
 
 
-B = Binary_tree()
-B.add_dataTree("Pizza?","","")
-B.add_dataTree("Fromagio?","Pizza?","Oui")
-B.add_dataTree("Pasta?","Pizza?","Non")
-B.add_dataTree("Bolo?","Pasta?","Oui")
+# B = Binary_tree()
+# B.add_dataTree("Pizza?","","")
+# B.add_dataTree("Fromagio?","Pizza?","Oui")
+# B.add_dataTree("Pasta?","Pizza?","Non")
+# B.add_dataTree("Bolo?","Pasta?","Oui")
 
 
-print(B.get_questionTree())
-B.send_answerTree("Non")
-print(B.get_questionTree())
-B.send_answerTree("Oui")
-print(B.get_questionTree())
-B.send_answerTree("Oui")
-print(B.get_questionTree())
-B.send_answerTree("Non")
-print(B.get_questionTree())
+# print(B.get_questionTree())
+# B.send_answerTree("Non")
+# print(B.get_questionTree())
+# B.send_answerTree("Oui")
+# print(B.get_questionTree())
+# B.send_answerTree("Oui")
+# print(B.get_questionTree())
+# B.send_answerTree("Non")
+# print(B.get_questionTree())

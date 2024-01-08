@@ -122,27 +122,27 @@ class chained_list :
 
 
 
-L = chained_list()
+# L = chained_list()
 
-L.append(5)
-L.append(6)
-
-
-
-
-for i in range(L.length):
-  print(L.get(i))
-
-print("---------")
-
-L.delete(1)
-
-print("---------")
+# L.append(5)
+# L.append(6)
 
 
 
-for i in range(L.length):
-  print(L.get(i))
+
+# for i in range(L.length):
+#   print(L.get(i))
+
+# print("---------")
+
+# L.delete(1)
+
+# print("---------")
+
+
+
+# for i in range(L.length):
+#   print(L.get(i))
 
 
 

@@ -123,27 +123,27 @@ def showHashMap(user_history_map, user_key):
         print(f"No history found for user {user_key}")
 
 
-# Example usage:
+# # Example usage:
 
-# Create a hashmap
-map = HashMap(10)
+# # Create a hashmap
+# map = HashMap(10)
 
-# Create user history linked lists
-user1_history = ChainedList()
-user2_history = ChainedList()
+# # Create user history linked lists
+# user1_history = ChainedList()
+# user2_history = ChainedList()
 
-# Append data to user history linked lists
-user1_history.appendChainedList("Event 1")
-user1_history.appendChainedList("Event 2")
+# # Append data to user history linked lists
+# user1_history.appendChainedList("Event 1")
+# user1_history.appendChainedList("Event 2")
 
-user2_history.appendChainedList("Event A")
-user2_history.appendChainedList("Event B")
+# user2_history.appendChainedList("Event A")
+# user2_history.appendChainedList("Event B")
 
-# Set user histories in the hashmap
-map.setKeyValueHashMap("user1", user1_history)
-map.setKeyValueHashMap("user2", user2_history)
+# # Set user histories in the hashmap
+# map.setKeyValueHashMap("user1", user1_history)
+# map.setKeyValueHashMap("user2", user2_history)
 
-# Show user histories
-showHashMap(map, "user1")
-showHashMap(map, "user2")
-showHashMap(map, "user3")  # Non-existent user
+# # Show user histories
+# showHashMap(map, "user1")
+# showHashMap(map, "user2")
+# showHashMap(map, "user3")  # Non-existent user
