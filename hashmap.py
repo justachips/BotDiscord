@@ -1,4 +1,5 @@
 from datetime import datetime
+from tools import *
 
 
 class HashMap:
@@ -96,9 +97,9 @@ def deleteChainedList(user_history_map, user_key):
     user_history = user_history_map.get_history(user_key)
     if user_history:
         user_history.deleteAllChainedList() 
-        return f"Success! History deleted for {user_key}."
+        return cadre(f"Success! History deleted for {user_key}.")
     else:
-        return f"Error! no history found for {user_key}."
+        return cadre(f"Error! no history found for {user_key}.")
 
 
 # adapter pour discord
@@ -112,9 +113,9 @@ async def showHashMap(ctx, user_history_map, user_key):
             message_data = current_node.data
             result_message += f"{message_data}\n"
             current_node = current_node.next_node
-        await ctx.send(result_message)
+        await ctx.send(cadre(result_message))
     else:
-        await ctx.send(f"Error! no history found for {user_key}")
+        await ctx.send(cadre(f"Error! no history found for {user_key}"))
         
         
 #get last message from history
@@ -127,9 +128,9 @@ async def showLastHashMap(ctx, user_history_map, user_key):
             message_data = current_node.data
             result_message = f"{message_data}\n"
             current_node = current_node.next_node
-        await ctx.send(result_message)
+        await ctx.send(cadre(result_message))
     else:
-        await ctx.send(f"Error! no history found for  {user_key}")
+        await ctx.send(cadre(f"Error! no history found for  {user_key}"))
 
 
 
