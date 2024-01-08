@@ -1,5 +1,11 @@
+import discord
+from discord.ext import commands
 from datetime import datetime
 from tools import *
+
+intents = discord.Intents.all()
+client = commands.Bot(command_prefix="!", intents=intents)
+
 
 
 class HashMap:
@@ -131,6 +137,12 @@ async def showLastHashMap(ctx, user_history_map, user_key):
         await ctx.send(cadre(result_message))
     else:
         await ctx.send(cadre(f"Error! no history found for  {user_key}"))
+        
+        
+        
+
+
+#navigate
 
 
 

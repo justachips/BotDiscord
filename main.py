@@ -2,11 +2,14 @@ import discord
 from discord.ext import commands
 from hashmap import *
 from tools import *
+from binarytree import *
 
 user_history_map = HashMap(50)
+
 intents = discord.Intents.all()
 
 client = commands.Bot(command_prefix="!", intents=intents)
+
 
 # @client.command(name="Hello")
 # async def delete(ctx):
@@ -24,14 +27,29 @@ async def showLastHistory(ctx, user_key):
     await showLastHashMap(ctx, user_history_map, user_key)
     
 @client.command(name="h-del") #delete
-async def delete_history(ctx, user_key):
+async def deleteHistory(ctx, user_key):
     result_message = deleteChainedList(user_history_map, user_key)
     await ctx.send(result_message)
     
-@client.command(name="h-nav") #navigate
-async def delete_history(ctx, user_key):
-    result_message = deleteChainedList(user_history_map, user_key)
-    await ctx.send(result_message)
+@client.command(name="sendhelp")
+async def help_command(ctx):
+    question = MyTree.get_questionTree()
+    await ctx.send(cadre(f"Bienvenue dans mon bot de choix vidéoludique, donne moi tes préférences et je te donnerais un jeu! \n Answer with '!send 1' or '!send 2' or '!send reset' for restart.\n{question}"))
+
+@client.command(name="send")
+async def answer_command(ctx, answer):
+    response = MyTree.send_answerTree(answer)
+    await ctx.send(cadre(response))
+
+
+
+
+
+
+
+
+   
+    
 
 
 
